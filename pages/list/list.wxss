@@ -1,0 +1,13 @@
+/* pages/list/list.wxss */
+.slide swiper {
+  height: 480rpx;
+}
+
+.slide swiper image {
+  height: 100%;
+  width: 100%;
+}
+
+.boards{
+  background: #F8F9FB;
+}

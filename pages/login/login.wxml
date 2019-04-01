@@ -1,0 +1,3 @@
+<view>
+  <button wx:if="{{canIUse && showButton}}" open-type='getUserInfo' bindgetuserinfo='bindgetUserInfo'>授权</button>
+</view>

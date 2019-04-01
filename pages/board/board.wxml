@@ -1,0 +1,48 @@
+<!--pages/board/board.wxml-->
+<view class="container">
+  <!-- 顶部轮播图 -->
+  <view class="slide">
+    <swiper indicator-dots="true" autoplay="true" interval="5000" duration="1000">
+      <swiper-item wx:for="{{ boards[0].movies }}" wx:key="id">
+        <image src="{{ item.images.large }}" mode="aspectFill" />
+      </swiper-item>
+    </swiper>
+  </view>
+  <view class="board">
+    <!-- 头条 -->
+    <view class="hot-board">
+      <view class="hot-title">
+        <text>头条</text>
+      </view>
+      <navigator class="hot-item" wx:for="{{hotBoards}}">
+          <view class="item-img">
+            <image src="{{item.image}}"></image>
+          </view>
+          <view class="item-des">
+            <text>{{item.description}}</text>
+          </view>
+      </navigator>
+    </view>
+    <!-- 相关推荐模块 -->
+    <block wx:for="{{boards}}" wx:key="key">
+      <view class="board-item">
+        <navigator url="../list/list?type={{ item.key }}&title={{ item.title }}" hover-class="none">
+          <view class="title">
+            <text>{{ item.title }}</text>
+            <image src="../../images/arrowright.png" mode="aspectFill" />
+          </view>
+        </navigator>
+        <scroll-view class="content" scroll-x="true">
+          <view class="inner">
+            <navigator wx:for="{{ item.movies }}" wx:key="id" url="../item/item?id={{ item.id }}">
+              <view class="movie-item">
+                <image src="{{ item.images.large }}" mode="aspectFill" />
+                <text>{{ item.title }}</text>
+              </view>
+            </navigator>
+          </view>
+        </scroll-view>
+      </view>
+    </block>
+  </view>
+</view>

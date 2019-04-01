@@ -1,0 +1,17 @@
+<!--pages/search/search.wxml-->
+<import src="../common/movie-list" />
+<view class="container">
+  <view class="search-bar">
+    <input placeholder='{{subtitle}}' bindchange="handleSearch"></input>
+  </view>
+  <view>
+     <template is="movie-list" data="{{ movies, loading, hasMore }}"/>
+   <!--  <view wx:for="{{movies}}">
+      <text>{{ item.name}}</text>
+    </view> -->
+  </view>
+  <view class="bottom-info">
+  <text wx:if="{{!hasMore}}">么有数据啦~</text>
+  <text wx:if="{{hasMore}}">拼命加载中~</text>
+  </view>
+</view>

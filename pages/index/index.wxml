@@ -1,5 +1,16 @@
 <!--index.wxml-->
 <view class="container">
+<swiper class="splash" indicator-dots>
+    <swiper-item wx:for="{{ movies }}" wx:for-index="index" wx:key="id">
+      <image src="{{ item.images.large }}" class="slide-image" mode="aspectFill"/>
+      <!-- bindtap 和 cachetap的区别，冒泡函数和非冒泡函数 -->
+      <button class="start" bindtap="bindHandleStart" wx:if="{{ index == 0 }}">立即体验</button>
+    </swiper-item>
+  </swiper>
+</view>
+
+
+<!-- <view class="container">
   <view class="userinfo">
     <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
     <block wx:else>
@@ -8,6 +19,6 @@
     </block>
   </view>
   <view class="usermotto">
-  <!--   <text class="user-motto">{{motto}}</text> -->
+    <text class="user-motto">{{motto}}</text>
   </view>
-</view>
+</view>-->

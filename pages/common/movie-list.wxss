@@ -1,0 +1,11 @@
+/* pages/common/movie-list.wxss */
+
+.movie-list{
+  font-size: 24rpx;
+  color: #666;
+}
+.movie-list-item{
+  width: 100%;
+  height: 200rpx;
+  border-bottom: 1px solid #ccc;
+}

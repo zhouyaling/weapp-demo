@@ -1,0 +1,13 @@
+<!-- 列表单项 -->
+<template name="item1">
+  <view class="movie-list-item">
+    <text>{{item.name}}</text>
+  </view>
+</template>
+
+<!-- 搜索列表 -->
+<template name="movie-list">
+  <view class="movie-list" wx:for="{{movies}}">
+    <template is="item1" data="{{item}}" wx:id="id" />
+  </view>
+</template>

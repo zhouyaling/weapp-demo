@@ -1,0 +1,19 @@
+@import "../common/movie-list.wxss";
+input{
+  text-align: center;
+  width: 98%;
+  border: 1px solid #F4A814;
+  border-radius: 10rpx;
+  margin: 0 auto;
+  height: 1.7rem;
+  line-height: 1.7rem;
+  font-size: 30rpx;
+  color: #888;
+}
+
+.bottom-info{
+  text-align: center;
+  font-size: 24rpx;
+  color: #ccc;
+  margin-top: 20rpx;
+}

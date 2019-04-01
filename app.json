@@ -1,31 +1,41 @@
 {
-  "pages":[
+  "pages": [
+    "pages/login/login",
+    "pages/board/board",
     "pages/index/index",
-    "pages/logs/logs"
+    "pages/logs/logs",
+    "pages/list/list",
+    "pages/item/item",
+    "pages/search/search"
+    
   ],
-  "window":{
-    "backgroundTextStyle":"light",
+  "window": {
+    "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#ffffff",
     "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle":"black"
+    "navigationBarTextStyle": "black"
   },
   "tabBar": {
-    "color": "#ccc",
-    "selectedColor": "#999",
+    "color": "#666666",
+    "selectedColor": "#000000",
+    "borderStyle": "white",
+    "backgroundColor": "#f8f9fb",
     "list": [
       {
-        "pagePath": "pages/index/index",
         "text": "首页",
-        "iconPath": "images/home.png",
-        "selectedIconPath": "images/home_active.png"
+        "pagePath": "pages/board/board",
+        "iconPath": "images/board.png",
+        "selectedIconPath": "images/board-actived.png"
       },
       {
+        "text": "我的",
         "pagePath": "pages/logs/logs",
-        "text": "日志",
-        "iconPath":"images/movie.png",
-        "selectedIconPath":"images/movie_active.png"
+        "iconPath": "images/profile.png",
+        "selectedIconPath": "images/profile-actived.png"
       }
     ]
   },
-  "requiredBackgroundModes":"audio"
+  "requiredBackgroundModes": [
+    "audio"
+  ]
 }

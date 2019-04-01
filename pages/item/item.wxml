@@ -1,0 +1,15 @@
+<!--pages/item/item.wxml-->
+<view class="container">
+  <image class="back-img" src="{{ detail.images.large }}"></image>
+  <block>
+    <view class="meta">
+      <image class="movie-cover" src="{{detail.images.large}}"></image>
+      <text class="movie-title">{{ detail.title }}({{ detail.year }})</text>
+      <text class="movie-people">评分:{{movie.rating.average}}</text>
+      <text class="movie-people">导演:<block wx:for="{{ detail.directors }}" wx:key="id"> {{ item.name }} </block></text>
+      <text class="movie-people" >主演:<block wx:for="{{ detail.casts }}" wx:key="id"> {{ item.name }} </block></text>
+      <text class="movie-zhaiyao">摘要</text>
+      <text class="movie-summary">{{detail.summary}}</text>
+    </view>
+  </block>
+</view>
